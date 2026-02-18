@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Events | Exclusive Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md text-white px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-amber-500">EPIC<span class="text-white font-light">EVENTS</span></div>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="hover:text-amber-500 transition">Home</a>
+                <a href="#services" class="hover:text-amber-500 transition">Services</a>
+                <a href="#about" class="hover:text-amber-500 transition">About</a>
+                <a href="#contact" class="bg-amber-600 px-5 py-2 rounded-full hover:bg-amber-500 transition">Call Us</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden flex-col space-y-4 pt-4 pb-2 md:hidden border-t border-gray-700 mt-4">
+            <a href="#home" class="block px-4 py-2 hover:bg-gray-800">Home</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-gray-800">Services</a>
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-800">About</a>
+            <a href="#contact" class="block px-4 py-2 text-amber-500 font-bold">Call Us</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30" class="w-full h-full object-cover brightness-50" alt="Event background">
+        </div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in">WELCOME TO <br> <span class="text-amber-500">EPIC EVENTS</span></h1>
+            <p class="text-lg md:text-2xl font-light tracking-wide max-w-2xl mx-auto mb-8">Exclusive Events. Priceless Memories. Professional Excellence.</p>
+            <a href="#services" class="border-2 border-white px-8 py-3 rounded-md hover:bg-white hover:text-black transition duration-300">EXPLORE SERVICES</a>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">OUR SERVICES</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group relative overflow-hidden rounded-xl shadow-lg h-80">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Wedding">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                    <h3 class="text-white text-xl font-semibold">Wedding & Cultural Events</h3>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl shadow-lg h-80">
+                <img src="https://images.unsplash.com/photo-1514525253361-bee8a4874a73" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Concerts">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                    <h3 class="text-white text-xl font-semibold">Concerts & DJ Parties</h3>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl shadow-lg h-80">
+                <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Corporate">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                    <h3 class="text-white text-xl font-semibold">Corporate Meetings</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-900 py-20 px-6 text-white">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
+                <p class="text-gray-400 mb-8">Plan your next big masterpiece with Raipur's finest event managers.</p>
+                <div class="space-y-4">
+                    <p><i class="fa-solid fa-phone text-amber-500 mr-3"></i> +91 88888 88888</p>
+                    <p><i class="fa-solid fa-envelope text-amber-500 mr-3"></i> hello@epicevents.com</p>
+                    <p><i class="fa-solid fa-location-dot text-amber-500 mr-3"></i> Raipur, Chhattisgarh</p>
+                </div>
+            </div>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-3 bg-gray-800 rounded border border-gray-700 focus:border-amber-500 outline-none">
+                <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 rounded border border-gray-700 focus:border-amber-500 outline-none">
+                <textarea rows="4" placeholder="Event Details" class="w-full p-3 bg-gray-800 rounded border border-gray-700 focus:border-amber-500 outline-none"></textarea>
+                <button class="w-full bg-amber-600 py-3 rounded font-bold hover:bg-amber-500 transition">SUBMIT REQUEST</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
