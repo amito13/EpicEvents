@@ -10,40 +10,83 @@
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md text-white px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter text-amber-500">EPIC<span class="text-white font-light">EVENTS</span></div>
-            
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="hover:text-amber-500 transition">Home</a>
-                <a href="#services" class="hover:text-amber-500 transition">Services</a>
-                <a href="#about" class="hover:text-amber-500 transition">About</a>
-                <a href="#contact" class="bg-amber-600 px-5 py-2 rounded-full hover:bg-amber-500 transition">Call Us</a>
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        
+        <div class="flex items-center cursor-pointer">
+            <img src="/imgs/epiclogo.png" alt="Epic Events Logo" class="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-10">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#team" class="nav-link">Our Team</a>
+            <div class="relative group">
+                <button class="nav-link flex items-center">
+                    More <i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#">Portfolio</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Gallery</a>
+                </div>
             </div>
-
-            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
 
-        <div id="mobile-menu" class="hidden flex-col space-y-4 pt-4 pb-2 md:hidden border-t border-gray-700 mt-4">
-            <a href="#home" class="block px-4 py-2 hover:bg-gray-800">Home</a>
-            <a href="#services" class="block px-4 py-2 hover:bg-gray-800">Services</a>
-            <a href="#about" class="block px-4 py-2 hover:bg-gray-800">About</a>
-            <a href="#contact" class="block px-4 py-2 text-amber-500 font-bold">Call Us</a>
+        <div class="hidden lg:block">
+            <a href="tel:+918888888888" class="cta-button">
+                <span>Call Us</span>
+                <i class="fa-solid fa-phone-flip text-xs"></i>
+            </a>
         </div>
-    </nav>
 
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30" class="w-full h-full object-cover brightness-50" alt="Event background">
+        <button id="menu-btn" class="lg:hidden text-white p-2">
+            <i class="fa-solid fa-bars-staggered text-2xl"></i>
+        </button>
+    </div>
+</nav>
+
+    <section id="home" class="relative h-screen w-full overflow-hidden bg-black">
+    
+    <div id="slider-wrapper" class="relative h-full w-full">
+        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+            <img src="/imgs/mirror.jpg" class="ken-burns h-full w-full object-cover brightness-50" alt="Luxury Wedding Decor">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                <h2 class="text-xs uppercase tracking-[0.5em] mb-4 animate-slide-up">Exquisite Craftsmanship</h2>
+                <h1 class="text-5xl md:text-8xl font-serif mb-6 animate-slide-up-delay">A Royal <span class="text-amber-500">Celebration</span></h1>
+                <div class="w-20 h-[1px] bg-amber-500 animate-width"></div>
+            </div>
         </div>
-        <div class="relative z-10 text-center text-white px-4">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in">WELCOME TO <br> <span class="text-amber-500">EPIC EVENTS</span></h1>
-            <p class="text-lg md:text-2xl font-light tracking-wide max-w-2xl mx-auto mb-8">Exclusive Events. Priceless Memories. Professional Excellence.</p>
-            <a href="#services" class="border-2 border-white px-8 py-3 rounded-md hover:bg-white hover:text-black transition duration-300">EXPLORE SERVICES</a>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="/imgs/haldi.jpg" class="ken-burns h-full w-full object-cover brightness-50" alt="Grand Birthday Setup">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                <h2 class="text-xs uppercase tracking-[0.5em] mb-4">Priceless Moments</h2>
+                <h1 class="text-5xl md:text-8xl font-serif mb-6">Epic <span class="text-amber-500">Milestones</span></h1>
+                <div class="w-20 h-[1px] bg-amber-500"></div>
+            </div>
         </div>
-    </section>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="/imgs/reception.jpg" class="ken-burns h-full w-full object-cover brightness-50" alt="Bride to be">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                <h2 class="text-xs uppercase tracking-[0.5em] mb-4">Elegant Themes</h2>
+                <h1 class="text-5xl md:text-8xl font-serif mb-6">Designed <span class="text-amber-500">For You</span></h1>
+                <div class="w-20 h-[1px] bg-amber-500"></div>
+            </div>
+        </div>
+    </div>
+
+    <button id="prevSlide" class="absolute left-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-amber-500 transition-all text-4xl">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="nextSlide" class="absolute right-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-amber-500 transition-all text-4xl">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex space-x-3" id="dots-container">
+        </div>
+</section>
 
     <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">OUR SERVICES</h2>
