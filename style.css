@@ -1,166 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap');
 
 :root {
+    --gold: #C6933A;
     --bg-dark: #0A0A0A;
-    --card-bg: #141414;
-    --gold-premium: #C6933A;
-    --text-soft: #9CA3AF;
+    --brand-gold: #C6933A;
 }
 
-body { font-family: 'Inter', sans-serif; }
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); }
+.font-cursive { font-family: 'Great Vibes', cursive; }
+.font-serif { font-family: 'Playfair Display', serif; }
 
-/* Navbar Default State */
-#navbar {
-    background: transparent;
-}
-
-/* Glass Effect on Scroll */
+/* Navbar */
 .nav-scrolled {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-/* --- Mobile Full-Screen Image Fix --- */
+#navbar {
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+/* --- HERO SLIDER VISIBILITY FIX --- */
+.slide img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+/* Mobile Specific Fixes */
 @media (max-width: 768px) {
-    #home {
-        height: 100vh !important; /* Forces hero to full phone height */
-    }
-
-    .slide {
-        display: block; /* Ensure it's not hidden */
-        height: 100%;
-    }
-
-    .slide img {
-        height: 100% !important;
-        width: 100% !important;
-        object-fit: cover; /* Keeps image from stretching */
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-    }
-
-    /* This moves your text ON TOP of the image like in image 3 */
-    .slide .text-container {
-        position: absolute;
-        inset: 0;
-        z-index: 10;
-        background: rgba(0, 0, 0, 0.4); /* Subtle dark tint so text is readable */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Fix the text size to prevent overlap */
-    .slide h1 {
-        font-size: 2.8rem !important;
-        margin: 10px 0;
+    .slide h1 { font-size: 2.8rem !important; line-height: 1.1; }
+    .slide h2 { font-size: 0.7rem !important; letter-spacing: 0.3em; }
+    
+    /* Ensure the text is centered and doesn't disappear */
+    .slide div[class*="absolute"] {
+        width: 100%;
+        padding: 0 20px;
     }
 }
-/* Nav Links */
+/* Stylish Underline Animation */
 .nav-link {
-    color: white;
+    font-family: 'Inter', sans-serif;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
     font-weight: 500;
     position: relative;
-    transition: color 0.3s;
 }
 
-.nav-link.active, .nav-link:hover {
-    color: var(--gold);
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
 }
 
+/* Restoration of the "Glass" Look on Scroll */
+.nav-scrolled {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+/* The Perfect "Call Us" Button */
+.cta-button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.7rem 1.8rem;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+    background: var(--brand-gold);
+    border-color: var(--brand-gold);
+    box-shadow: 0 8px 25px rgba(198, 147, 58, 0.3);
+    transform: translateY(-2px);
+}
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 1.5px;
     bottom: -6px;
     left: 0;
-    background: var(--gold);
-    transition: width 0.3s;
+    background-color: var(--brand-gold);
+    transition: width 0.3s ease;
 }
-
-.nav-link:hover::after { width: 100%; }
-
-/* Dropdown styling */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin-top: 1rem;
-    background: rgba(10, 10, 10, 0.95);
-    border-top: 2px solid var(--gold);
-    min-width: 180px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-}
-
-.group:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Premium Call Button */
-.cta-button {
-    background: var(--glass);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 0.6rem 1.8rem;
-    border-radius: 99px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.4s;
-}
-
-.cta-button:hover {
-    background: var(--gold);
-    border-color: var(--gold);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(198, 147, 58, 0.3);
-}
-/* Ken Burns Effect: Slow Zoom In */
-@keyframes kenburns {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.15); }
-}
-
-.ken-burns {
-    animation: kenburns 20s ease-out infinite alternate;
-}
-
-/* Text Entrance Animations */
-.animate-slide-up {
-    animation: slideUp 1s ease-out forwards;
-}
-
-.animate-slide-up-delay {
-    animation: slideUp 1s ease-out 0.3s forwards;
-    opacity: 0;
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes growWidth {
-    from { width: 0; }
-    to { width: 80px; }
-}
-
-.animate-width {
-    animation: growWidth 1.5s ease-out 0.8s forwards;
-}
-
+/* Services Cards */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap');
 
 /* Typography */
@@ -343,4 +278,50 @@ body { font-family: 'Inter', sans-serif; }
 .service-card.mobile-active .service-btn {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+/* Footer Custom Styles */
+.footer-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-link {
+    color: #9CA3AF;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #C6933A; /* Your Logo Gold */
+    transform: translateX(8px);
+}
+
+.footer-social-link {
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-social-link:hover {
+    background: #C6933A;
+    border-color: #C6933A;
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(198, 147, 58, 0.3);
+}
+
+/* Add a subtle vignette to the footer background */
+footer {
+    background: radial-gradient(circle at top right, #0a0a0a, #050505);
 }

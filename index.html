@@ -10,38 +10,39 @@
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 py-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+ <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 py-4 lg:px-12">
+    <div class="max-w-[1440px] mx-auto flex justify-between items-center">
         
-        <div class="flex items-center cursor-pointer">
-            <img src="/imgs/epiclogo.png" alt="Epic Events Logo" class="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105">
+        <div class="flex items-center group cursor-pointer">
+            <img src="/imgs/epiclogo.png" alt="Epic Events" class="h-14 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </div>
 
-        <div class="hidden lg:flex items-center space-x-10">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#team" class="nav-link">Our Team</a>
+        <div class="hidden lg:flex items-center space-x-12">
+            <a href="#home" class="nav-link text-amber-500 active">Home</a>
+            <a href="#services" class="nav-link text-white hover:text-amber-500 transition">Services</a>
+            <a href="#team" class="nav-link text-white hover:text-amber-500 transition">Our Team</a>
+            
             <div class="relative group">
-                <button class="nav-link flex items-center">
-                    More <i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i>
+                <button class="nav-link text-white flex items-center group-hover:text-amber-500">
+                    More <i class="fa-solid fa-chevron-down ml-2 text-[10px] transition-transform group-hover:rotate-180"></i>
                 </button>
-                <div class="dropdown-menu">
-                    <a href="#">Portfolio</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">Gallery</a>
+                <div class="absolute top-full left-0 mt-4 w-48 bg-black/90 backdrop-blur-xl border-t-2 border-amber-600 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <a href="#" class="block px-6 py-3 text-sm text-white hover:bg-amber-600/20 hover:text-amber-500">Portfolio</a>
+                    <a href="#" class="block px-6 py-3 text-sm text-white hover:bg-amber-600/20 hover:text-amber-500">Testimonials</a>
+                    <a href="#" class="block px-6 py-3 text-sm text-white hover:bg-amber-600/20 hover:text-amber-500">Gallery</a>
                 </div>
             </div>
         </div>
 
         <div class="hidden lg:block">
             <a href="tel:+918888888888" class="cta-button">
-                <span>Call Us</span>
-                <i class="fa-solid fa-phone-flip text-xs"></i>
+                <span class="font-medium tracking-widest">Call Us</span>
+                <i class="fa-solid fa-phone-volume text-sm ml-2"></i>
             </a>
         </div>
 
-        <button id="menu-btn" class="lg:hidden text-white p-2">
-            <i class="fa-solid fa-bars-staggered text-2xl"></i>
+        <button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+            <i class="fa-solid fa-bars-staggered"></i>
         </button>
     </div>
 </nav>
@@ -70,7 +71,7 @@
         </div>
 
         <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="/imgs/onkar-singh-LoSIeIr7Bhc-unsplash.jpg" alt="Grand Birthday Setup">
+            <img src="/imgs/alok-verma-ySw3ENMuD9E-unsplash.jpg" alt="Grand Birthday Setup">
             <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                 <h2 class="text-xs uppercase tracking-[0.5em] mb-4">Priceless Moments</h2>
                 <h1 class="text-5xl md:text-8xl font-serif mb-6">Epic <span class="text-amber-500">Milestones</span></h1>
@@ -79,7 +80,7 @@
         </div>
 
         <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="/imgs/alok-verma-ySw3ENMuD9E-unsplash.jpg" class="ken-burns h-full w-full object-cover brightness-50" alt="Bride to be">
+            <img src="/imgs/reception.jpg" class="ken-burns h-full w-full object-cover brightness-50" alt="Bride to be">
             <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                 <h2 class="text-xs uppercase tracking-[0.5em] mb-4">Elegant Themes</h2>
                 <h1 class="text-5xl md:text-8xl font-serif mb-6">Designed <span class="text-amber-500">For You</span></h1>
@@ -87,14 +88,7 @@
             </div>
         </div>
 
-         <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="/imgs/night.jpg" class="ken-burns h-full w-full object-cover brightness-50" alt="Bride to be">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-                <h2 class="text-xs uppercase tracking-[0.5em] mb-4">Elegant Themes</h2>
-                <h1 class="text-5xl md:text-8xl font-serif mb-6">Designed <span class="text-amber-500">For You</span></h1>
-                <div class="w-20 h-[1px] bg-amber-500"></div>
-            </div>
-        </div>
+        
     </div>
 
     <button id="prevSlide" class="absolute left-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-amber-500 transition-all text-4xl">
@@ -108,7 +102,7 @@
         </div>
 </section>
 
-    <section id="services" class="py-24 bg-white px-6">
+     <section id="services" class="py-24 bg-white px-6">
     <div class="max-w-[1400px] mx-auto">
         <div class="text-center mb-20">
             <h2 class="text-amber-500 text-5xl md:text-7xl font-cursive mb-4">Our Services</h2>
@@ -192,26 +186,87 @@
         </div>
     </div>
 </section>
-
-    <section id="contact" class="bg-gray-900 py-20 px-6 text-white">
-        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+<footer class="bg-[#050505] text-white pt-20 pb-10 px-6 border-t border-white/5">
+    <div class="max-w-[1440px] mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 pb-16 border-b border-white/10">
             <div>
-                <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
-                <p class="text-gray-400 mb-8">Plan your next big masterpiece with Raipur's finest event managers.</p>
-                <div class="space-y-4">
-                    <p><i class="fa-solid fa-phone text-amber-500 mr-3"></i> +91 88888 88888</p>
-                    <p><i class="fa-solid fa-envelope text-amber-500 mr-3"></i> hello@epicevents.com</p>
-                    <p><i class="fa-solid fa-location-dot text-amber-500 mr-3"></i> Raipur, Chhattisgarh</p>
+                <img src="/imgs/epiclogo.png" alt="Epic Events" class="h-20 mb-6">
+                <p class="text-gray-400 max-w-md leading-relaxed">
+                    Crafting extraordinary experiences that linger in your memories forever. From royal weddings to elite corporate gatherings, we bring your vision to life.
+                </p>
+                <div class="flex space-x-5 mt-8">
+                    <a href="#" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <form class="space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full p-3 bg-gray-800 rounded border border-gray-700 focus:border-amber-500 outline-none">
-                <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 rounded border border-gray-700 focus:border-amber-500 outline-none">
-                <textarea rows="4" placeholder="Event Details" class="w-full p-3 bg-gray-800 rounded border border-gray-700 focus:border-amber-500 outline-none"></textarea>
-                <button class="w-full bg-amber-600 py-3 rounded font-bold hover:bg-amber-500 transition">SUBMIT REQUEST</button>
-            </form>
+            
+            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-md">
+                <h4 class="font-serif text-2xl mb-4">Stay in the Loop</h4>
+                <p class="text-gray-400 text-sm mb-6">Subscribe to get event inspiration and exclusive offers.</p>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Email Address" class="flex-1 bg-black/40 border border-white/20 rounded-full px-6 py-3 outline-none focus:border-amber-500 transition">
+                    <button class="bg-amber-600 hover:bg-amber-500 text-black font-bold px-8 py-3 rounded-full transition-all">JOIN NOW</button>
+                </form>
+            </div>
         </div>
-    </section>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+            <div>
+                <h5 class="footer-heading">Quick Links</h5>
+                <ul class="space-y-3">
+                    <li><a href="#home" class="footer-link">Home</a></li>
+                    <li><a href="#services" class="footer-link">Our Services</a></li>
+                    <li><a href="#team" class="footer-link">The Team</a></li>
+                    <li><a href="#" class="footer-link">Event Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="footer-heading">Top Services</h5>
+                <ul class="space-y-3">
+                    <li><a href="#" class="footer-link">Royal Weddings</a></li>
+                    <li><a href="#" class="footer-link">Corporate Galas</a></li>
+                    <li><a href="#" class="footer-link">DJ & Sound</a></li>
+                    <li><a href="#" class="footer-link">Proposals</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="footer-heading">Contact Us</h5>
+                <ul class="space-y-4">
+                    <li class="flex items-start space-x-3 text-gray-400 text-sm">
+                        <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
+                        <span>Rawatpura Colony Rd Face-II,<br>Bhatagaon, Raipur, Chhattisgarh 492001</span>
+                    </li>
+                    <li class="flex items-center space-x-3 text-gray-400 text-sm">
+                        <i class="fa-solid fa-phone text-amber-500"></i>
+                        <span>+91 88176 55581</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="footer-heading">Working Hours</h5>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Mon - Sat: 10:00 AM - 08:00 PM<br>
+                    Sunday: By Appointment Only
+                </p>
+                <div class="mt-6 flex items-center space-x-2 text-amber-500 text-xs tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span>Available for Bookings</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-10 border-t border-white/10 flex flex-col md:row justify-between items-center text-xs text-gray-500 tracking-widest uppercase">
+            <p>&copy; 2026 EPIC EVENTS. ALL RIGHTS RESERVED.</p>
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="main.js"></script>
 </body>
