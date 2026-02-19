@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap');
 
 :root {
-    --gold: #c6933a; /* Matching your logo's gold tone */
-    --glass: rgba(255, 255, 255, 0.05);
+    --bg-dark: #0A0A0A;
+    --card-bg: #141414;
+    --gold-premium: #C6933A;
+    --text-soft: #9CA3AF;
 }
 
 body { font-family: 'Inter', sans-serif; }
@@ -203,4 +205,72 @@ body { font-family: 'Inter', sans-serif; }
     opacity: 1;
     background: #f59e0b;
     border-color: #f59e0b;
+}
+#services {
+    background-color: #0a0a0a; /* Deep Premium Black */
+    color: #ffffff;
+}
+
+#services h2 {
+    color: #f59e0b; /* Keeps your Great Vibes font in Gold */
+}
+
+#services p {
+    color: #9ca3af; /* Soft gray for the 'Crafting Perfection' subtitle */
+}
+
+
+
+#services {
+    background-color: var(--bg-dark); /* The Premium Switch */
+    color: white;
+}
+
+.service-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border for depth */
+    transition: border-color 0.5s ease;
+}
+
+.service-card:hover {
+    border-color: var(--gold-premium);
+}
+
+.service-subtitle {
+    color: var(--gold-premium); /* Gold matches your logo precisely */
+}
+
+/* Scrollbar refinement for premium feel */
+::-webkit-scrollbar-thumb {
+    background: var(--gold-premium);
+}
+
+/* Combine Desktop Hover and Mobile Scroll-In Effects */
+
+/* 1. Image Animation */
+.service-card:hover img,
+.service-card.mobile-active img {
+    filter: grayscale(0%) brightness(100%);
+    transform: scale(1.1);
+}
+
+/* 2. Subtitle Reveal */
+.service-card:hover .service-subtitle,
+.service-card.mobile-active .service-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 3. Button Reveal */
+.service-card:hover .service-btn,
+.service-card.mobile-active .service-btn {
+    opacity: 1;
+    background: #c6933a; /* Your Premium Gold color */
+    border-color: #c6933a;
+}
+
+/* 4. Overlay Dimming */
+.service-card:hover .service-overlay,
+.service-card.mobile-active .service-overlay {
+    background: rgba(0, 0, 0, 0.4);
 }

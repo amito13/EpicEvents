@@ -91,3 +91,25 @@ prevBtn.addEventListener('click', prevSlide);
 
 // Auto Play
 setInterval(nextSlide, slideInterval);
+
+// Function to handle mobile scroll-reveal animations
+const observerOptions = {
+    threshold: 0.5 // Trigger when 50% of the card is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add the active class when the card is in view
+            entry.target.classList.add('mobile-active');
+        } else {
+            // Remove it when it leaves the view (optional)
+            entry.target.classList.remove('mobile-active');
+        }
+    });
+}, observerOptions);
+
+// Target all service cards
+document.querySelectorAll('.service-card').forEach(card => {
+    observer.observe(card);
+});
