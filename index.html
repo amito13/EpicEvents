@@ -45,12 +45,23 @@
         </button>
     </div>
 </nav>
+<div id="mobile-drawer" class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl translate-x-full transition-transform duration-500 ease-in-out lg:hidden">
+    <div class="flex justify-end p-8">
+        <button id="close-drawer" class="text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="flex flex-col items-center space-y-8 mt-10">
+        <a href="#home" class="mobile-link text-amber-500">Home</a>
+        <a href="#services" class="mobile-link text-white">Services</a>
+        <a href="#team" class="mobile-link text-white">Our Team</a>
+        <a href="tel:+918888888888" class="bg-amber-500 text-black px-8 py-3 rounded-full font-bold">Call Now</a>
+    </div>
+</div>
 
     <section id="home" class="relative h-screen w-full overflow-hidden bg-black">
     
     <div id="slider-wrapper" class="relative h-full w-full">
         <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
-            <img src="/imgs/av2.jpg" alt="Luxury Wedding Decor">
+            <img src="/imgs/i1.jpg" alt="Luxury Wedding Decor">
             <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                 <h2 class="text-xs uppercase tracking-[0.5em] mb-4 animate-slide-up">Exquisite Craftsmanship</h2>
                 <h1 class="text-5xl md:text-8xl font-serif mb-6 animate-slide-up-delay">A Royal <span class="text-amber-500">Celebration</span></h1>

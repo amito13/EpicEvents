@@ -23,7 +23,44 @@ body { font-family: 'Inter', sans-serif; }
     padding-bottom: 0.75rem !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* --- Mobile Full-Screen Image Fix --- */
+@media (max-width: 768px) {
+    #home {
+        height: 100vh !important; /* Forces hero to full phone height */
+    }
 
+    .slide {
+        display: block; /* Ensure it's not hidden */
+        height: 100%;
+    }
+
+    .slide img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover; /* Keeps image from stretching */
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    /* This moves your text ON TOP of the image like in image 3 */
+    .slide .text-container {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.4); /* Subtle dark tint so text is readable */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Fix the text size to prevent overlap */
+    .slide h1 {
+        font-size: 2.8rem !important;
+        margin: 10px 0;
+    }
+}
 /* Nav Links */
 .nav-link {
     color: white;
@@ -273,4 +310,37 @@ body { font-family: 'Inter', sans-serif; }
 .service-card:hover .service-overlay,
 .service-card.mobile-active .service-overlay {
     background: rgba(0, 0, 0, 0.4);
+}
+
+/* --- Fix Hero Text Overlap on Mobile --- */
+@media (max-width: 768px) {
+    .slide h1 {
+        font-size: 2.5rem !important; /* Shrinks the large 'Royal Celebration' text */
+        line-height: 1.2;
+    }
+    .slide h2 {
+        font-size: 0.6rem !important; /* Shrinks the 'Priceless Moments' tag */
+        letter-spacing: 0.3em;
+    }
+    .slide .animate-width {
+        width: 40px !important; /* Shorter gold line on mobile */
+    }
+}
+
+/* --- Mobile Menu Link Styles --- */
+.mobile-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* --- The Mobile Active Property (For Scrolling) --- */
+.service-card.mobile-active img {
+    filter: grayscale(0%) brightness(100%) !important;
+    transform: scale(1.05) !important;
+}
+.service-card.mobile-active .service-subtitle,
+.service-card.mobile-active .service-btn {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }

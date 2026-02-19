@@ -3,9 +3,10 @@ const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
 menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
+    drawer.classList.remove('translate-x-full'); // Slides it in from the right
 });
+
+
 
 // Close mobile menu on link click
 document.querySelectorAll('#mobile-menu a').forEach(link => {
@@ -113,3 +114,38 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service-card').forEach(card => {
     observer.observe(card);
 });
+
+ menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-drawer');
+const drawer = document.getElementById('mobile-drawer');
+
+// 1. Toggle Side Drawer
+menuBtn.addEventListener('click', () => {
+    drawer.classList.remove('translate-x-full');
+});
+
+closeBtn.addEventListener('click', () => {
+    drawer.classList.add('translate-x-full');
+});
+
+// Close drawer when a link is clicked
+document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => drawer.classList.add('translate-x-full'));
+});
+
+// 2. Mobile Intersection Observer (Auto-hover on scroll)
+const mobileObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('mobile-active');
+        } else {
+            entry.target.classList.remove('mobile-active');
+        }
+    });
+}, { threshold: 0.6 }); // Triggers when 60% of card is in center of phone screen
+
+document.querySelectorAll('.service-card').forEach(card => {
+    mobileObserver.observe(card);
+});
+
+// main.js
