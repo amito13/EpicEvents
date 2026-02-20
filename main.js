@@ -78,3 +78,28 @@ const mobileObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service-card').forEach(card => {
     mobileObserver.observe(card);
 });
+
+// --- Service Detail Logic ---
+const exploreButtons = document.querySelectorAll('.explore-trigger');
+const closeDetailButtons = document.querySelectorAll('.close-detail');
+
+exploreButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const serviceType = btn.getAttribute('data-service');
+        const targetDetail = document.getElementById(`detail-${serviceType}`);
+        
+        if (targetDetail) {
+            targetDetail.classList.remove('hidden');
+            document.body.classList.add('no-scroll');
+        }
+    });
+});
+
+closeDetailButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Find the parent detail overlay and hide it
+        const parentOverlay = btn.closest('.service-detail-overlay');
+        parentOverlay.classList.add('hidden');
+        document.body.classList.remove('no-scroll');
+    });
+});

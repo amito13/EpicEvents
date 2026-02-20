@@ -116,7 +116,8 @@
                 <div class="service-overlay">
                     <h3 class="font-serif text-2xl text-white">Grand Weddings</h3>
                     <p class="service-subtitle">Royal Decor & Planning</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                   <button class="service-btn explore-trigger" data-service="wedding">EXPLORE</button>
+                     
                 </div>
             </div>
 
@@ -125,7 +126,7 @@
                 <div class="service-overlay">
                     <h3 class="font-serif text-2xl text-white">DJ & Music Concerts</h3>
                     <p class="service-subtitle">Sound, Lighting & Visuals</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                    <button class="service-btn explore-trigger" data-service="dj">EXPLORE</button>
                 </div>
             </div>
 
@@ -134,7 +135,7 @@
                 <div class="service-overlay">
                     <h3 class="font-serif text-2xl text-white">Baby Showers</h3>
                     <p class="service-subtitle">Our Little Honey is on the way</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                   <button class="service-btn explore-trigger" data-service="baby">EXPLORE</button>
                 </div>
             </div>
 
@@ -143,7 +144,7 @@
                 <div class="service-overlay">
                     <h3 class="font-serif text-2xl text-white">Cultural Events</h3>
                     <p class="service-subtitle">Vibrant Traditions & Decor</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                    <button class="service-btn explore-trigger" data-service="cultural">EXPLORE</button>
                 </div>
             </div>
 
@@ -152,16 +153,16 @@
                 <div class="service-overlay">
                     <h3 class="font-serif text-2xl text-white">Anniversary Deco</h3>
                     <p class="service-subtitle">Celebrating Forever</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                    <button class="service-btn explore-trigger" data-service="anniversary">EXPLORE</button>
                 </div>
             </div>
 
             <div class="service-card group">
                 <img src="/imgs/propose.jpg" alt="Proposal">
-                <div class="service-overlay">
+                <div class="service-overlay" >
                     <h3 class="font-serif text-2xl text-white">Date & Proposals</h3>
                     <p class="service-subtitle">Magical Settings for 'Yes'</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                   <button class="service-btn explore-trigger" data-service="proposal">EXPLORE</button>
                 </div>
             </div>
 
@@ -170,7 +171,7 @@
                 <div class="service-overlay">
                     <h3 class="font-serif text-2xl text-white">Corporate Events</h3>
                     <p class="service-subtitle">Meetings & Product Launches</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                    <button class="service-btn explore-trigger" data-service="corporate">EXPLORE</button>
                 </div>
             </div>
 
@@ -179,7 +180,7 @@
                 <div class="service-overlay">
                     <h3 class="font-serif text-2xl text-white">Experiences</h3>
                     <p class="service-subtitle">Cold Pyro & Mirror Entry</p>
-                    <a href="#" class="service-btn">EXPLORE</a>
+                     <button class="service-btn explore-trigger" data-service="experiences">EXPLORE</button>
                 </div>
             </div>
 
@@ -268,6 +269,234 @@
     </div>
 </footer>
 
+        <div id="detail-wedding" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button>
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="/imgs/wedding.jpg" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">Wedding</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Event Services</h3>
+            </div>
+        </div>
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Budget Management</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Wedding Invites</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Design and Decors</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Bridal Styling</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Entertainment</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Videography & Cinema</div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</div>
+
+<div id="detail-baby" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button>
+        
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="/imgs/babyshowe.jpg" class="w-full h-full object-cover opacity-60" alt="Baby Shower Setup">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">New Beginnings</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Baby Showers</h3>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Theme-Based Cradles</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Gender Reveal Surprises</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Dessert & Cake Tables</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Custom Balloon Arches</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Mom-to-Be Seating</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Floral & Bee Decor</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Guest Favor Curation</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Photography & Video</div>
+            </div>
+            
+            <div class="mt-16 pt-10 border-t border-white/10">
+                <p class="text-gray-400 text-sm mb-6">Planning a sweet welcome in Raipur?</p>
+                <a href="tel:+918888888888" class="inline-block bg-amber-600 text-black px-10 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-amber-500 transition-all">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="detail-dj" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button>
+        
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30" class="w-full h-full object-cover opacity-60" alt="Concert Setup">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">Concerts</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Sound & Lighting</h3>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> High-End Audio Systems</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Intelligent Stage Lighting</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> LED Wall Visuals</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Professional DJ Lineups</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Concert Stage Trussing</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Technical Crew Support</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Live Sound Engineering</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Power Backup Solutions</div>
+            </div>
+            
+            <div class="mt-16 pt-10 border-t border-white/10">
+                <p class="text-gray-400 text-sm mb-6">Ready to amplify your event in Raipur?</p>
+                <a href="tel:+918888888888" class="inline-block bg-amber-600 text-black px-10 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-amber-500 transition-all">Book the Vibe</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="detail-cultural" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button>
+        
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="/imgs/cult.jpg" class="w-full h-full object-cover opacity-60" alt="Cultural Decor">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">Vibrant</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Traditions</h3>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Haldi & Mehendi Concept Decor</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Sangeet Stage & Choreography</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Traditional Folk Performances</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Floral Rangoli & Backdrops</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Dhol & Brass Band Logistics</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Catering with Local Flavors</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Guest Gifting & Hampers</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Themed Wardrobe Assistance</div>
+            </div>
+            
+            <div class="mt-16 pt-10 border-t border-white/10 text-center lg:text-left">
+                <p class="text-gray-400 text-sm mb-6">Want to make your traditions look epic in Raipur?</p>
+                <a href="tel:+918888888888" class="inline-block bg-amber-600 text-black px-10 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-amber-500 transition-all">Start Planning</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="detail-anniversary" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button>
+        
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="/imgs/anni.jpg" class="w-full h-full object-cover opacity-60" alt="Anniversary Setup">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">Forever</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Anniversary Deco</h3>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Milestone Backdrop Designs</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Surprise Room Decorations</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Sparkle & Glitter Theme Setups</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Intimate Candlelight Dinner Decor</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Memory Lane Photo Walls</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Renewal of Vows Arrangements</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Custom Anniversary Cake Design</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Live Instrumental Music</div>
+            </div>
+            
+            <div class="mt-16 pt-10 border-t border-white/10 text-center lg:text-left">
+                <p class="text-gray-400 text-sm mb-6">Want to celebrate your milestone in style in Raipur?</p>
+                <a href="tel:+918888888888" class="inline-block bg-amber-600 text-black px-10 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-amber-500 transition-all">Start Planning</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="detail-proposal" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <!-- <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button> -->
+        
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="/imgs/propose.jpg" class="w-full h-full object-cover opacity-60" alt="Proposal Setup">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">Romance</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Date & Proposals</h3>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> 'Marry Me' Neon Signage</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Private Rooftop Dinners</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Floral Walkway Entrance</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Heart-Shaped Light Decor</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Candlelight Arrangements</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Hidden Photographer</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="detail-corporate" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button>
+        
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="/imgs/cor.jpg" class="w-full h-full object-cover opacity-60" alt="Corporate Setup">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">Professional</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Corporate Events</h3>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Product Launch Events</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Annual Award Nights</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Conference Management</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Stage & Podium Branding</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Delegate Kit Management</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Professional Sound & Mic</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="detail-experiences" class="service-detail-overlay fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/95 flex flex-col lg:flex-row">
+        <!-- <button class="close-detail absolute top-8 right-8 text-white text-4xl z-[110]">&times;</button> -->
+        
+        <div class="lg:w-1/2 h-1/2 lg:h-full relative">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30" class="w-full h-full object-cover opacity-60" alt="Experience Setup">
+            <div class="absolute inset-0 flex flex-col justify-center p-12">
+                <h2 class="font-cursive text-amber-500 text-6xl mb-4">Magic</h2>
+                <h3 class="font-serif text-4xl text-white uppercase tracking-widest">Special Experiences</h3>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 p-8 lg:p-20 overflow-y-auto bg-[#0A0A0A]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 mt-12">
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Low Fog & Cold Pyro Entry</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Fireworks & Fire Shows</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Mirror & Cart Grand Entry</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Artist & Folk Performances</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Live Instrumental Music</div>
+                <div class="detail-item"><i class="fa-regular fa-circle-play mr-3 text-amber-500"></i> Themed Wardrobe Assistance</div>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="main.js"></script>
 </body>
 </html>
