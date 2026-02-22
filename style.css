@@ -357,3 +357,39 @@ footer {
 body.no-scroll {
     overflow: hidden;
 }
+
+/* Preloader Styles */
+#preloader {
+    pointer-events: none; /* Prevents users from clicking while loading */
+}
+
+/* Entrance Animation for the Logo */
+@keyframes logoEntrance {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+#preloader img {
+    animation: logoEntrance 1.5s ease-out forwards;
+}
+
+/* Class to fade out the preloader */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Prevent scrolling while preloader is active */
+body.loading {
+    overflow: hidden;
+}
+
+/* Premium Map Styling */
+iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    transition: filter 0.5s ease;
+}
+
+.rounded-2xl:hover iframe {
+    filter: none; /* Shows natural colors on interaction */
+}

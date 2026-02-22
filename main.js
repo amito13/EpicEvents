@@ -103,3 +103,17 @@ closeDetailButtons.forEach(btn => {
         document.body.classList.remove('no-scroll');
     });
 });
+
+// --- Preloader Logic ---
+document.body.classList.add('loading'); // Lock scroll
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    
+    // Set a small delay (e.g., 2 seconds) to match the reference video's pacing
+    setTimeout(() => {
+        preloader.classList.add('preloader-hidden');
+        document.body.classList.remove('loading'); // Unlock scroll
+    }, 2000); 
+});
+
